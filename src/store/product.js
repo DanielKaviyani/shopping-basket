@@ -1,5 +1,3 @@
-import { API_SERVER } from "@/api/server";
-
 const state = () => ({
   products: []
 });
@@ -12,7 +10,7 @@ const mutations = {
 
 const actions = {
   async get_products({ commit }) {
-    await fetch(API_SERVER)
+    await fetch("/api")
       .then(data => data.json())
       .then(res => {
         commit("SET_LIST", res);

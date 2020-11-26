@@ -1,11 +1,11 @@
 <template>
-  <h2 class="title">Product List</h2>
+  <h4 class="title">Product List</h4>
   <div class="product-list">
     <div v-for="(product, index) in products" :key="index" class="product-item">
       <div class="product-title">
         {{ make_limit(product.title) }}
       </div>
-      <button>Add to Basket</button>
+      <button @click="$emit('add', product)">Add to Basket</button>
     </div>
   </div>
 </template>
@@ -26,7 +26,7 @@ export default {
   .product-item {
     border: 1px solid blue;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
