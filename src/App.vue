@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper">
-    <div class="products">
+    <div class="products-wrapper">
       <productList @add="add_to_basket" />
     </div>
-    <div class="basket">
+    <div class="basket-wrapper">
       <basket :basket="basket" @totally="totally" @clear="clear" />
     </div>
   </div>
@@ -50,18 +50,24 @@ export default {
   border: 1px solid blue;
   padding: 10px;
   display: flex;
-  .products {
+  .products-wrapper {
     width: 60%;
     border: 1px solid green;
-    padding: 10px;
   }
-  .basket {
+  .basket-wrapper {
     width: 40%;
     border: 1px solid blue;
     min-height: 100%;
     margin-left: 10px;
     background-color: #eee;
-    padding: 10px;
+  }
+  @media (max-width: 768px) {
+    display: block;
+    .products-wrapper, .basket-wrapper {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 10px;
+    }
   }
 }
 </style>

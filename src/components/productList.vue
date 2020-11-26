@@ -23,13 +23,16 @@ export default {
 
 <style lang="scss" scoped>
 .product-list {
+  padding: 10px;
   .product-item {
     border: 1px solid blue;
     padding: 10px;
-    margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 }
 </style>

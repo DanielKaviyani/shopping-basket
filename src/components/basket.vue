@@ -41,9 +41,6 @@ export default {
 
 <style lang="scss" scoped>
 .basket {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   .basket-item {
     padding: 10px 0;
     display: flex;
