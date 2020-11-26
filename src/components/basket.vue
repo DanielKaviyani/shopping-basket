@@ -62,7 +62,7 @@ export default {
     margin: 0 0 0 auto;
   }
   .total-price {
-    color: brown;
+    color: #000;
     font-weight: bold;
   }
   .count {
