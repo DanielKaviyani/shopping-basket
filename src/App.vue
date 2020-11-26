@@ -63,7 +63,8 @@ export default {
   }
   @media (max-width: 768px) {
     display: block;
-    .products-wrapper, .basket-wrapper {
+    .products-wrapper,
+    .basket-wrapper {
       width: 100%;
       margin: 0;
       margin-bottom: 10px;
